@@ -7,16 +7,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'Poppins', 'system-ui', 'sans-serif'],
+        sans: ['Roboto', 'system-ui', 'sans-serif'],
       },
       colors: {
         'street-black': '#1a1a1a',
         'street-white': '#fafafa',
-        'street-beige': '#e5e5e5',
         'street-accent': '#646cff',
+      },
+      borderRadius: {
+        'sm': '4px',
       }
     },
   },
   plugins: [],
 }
-

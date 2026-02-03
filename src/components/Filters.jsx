@@ -56,7 +56,6 @@ const Filters = ({ filters, setFilters, products }) => {
 
   return (
     <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-      {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-bold text-street-black">Filters</h2>
         {hasActiveFilters && (
@@ -69,7 +68,6 @@ const Filters = ({ filters, setFilters, products }) => {
         )}
       </div>
 
-      {/* Sort */}
       <div className="mb-6">
         <label className="block text-sm font-medium text-gray-700 mb-2">Sort by</label>
         <select
@@ -85,7 +83,6 @@ const Filters = ({ filters, setFilters, products }) => {
         </select>
       </div>
 
-      {/* Category Filter */}
       <div className="mb-6">
         <button
           onClick={() => toggleSection('category')}
@@ -135,7 +132,6 @@ const Filters = ({ filters, setFilters, products }) => {
         )}
       </div>
 
-      {/* Price Filter */}
       <div className="mb-6">
         <button
           onClick={() => toggleSection('price')}
@@ -175,7 +171,6 @@ const Filters = ({ filters, setFilters, products }) => {
         )}
       </div>
 
-      {/* Size Filter */}
       <div className="mb-6">
         <button
           onClick={() => toggleSection('size')}
@@ -210,7 +205,6 @@ const Filters = ({ filters, setFilters, products }) => {
         )}
       </div>
 
-      {/* Active Filters Summary */}
       {hasActiveFilters && (
         <div className="pt-4 border-t border-gray-100">
           <p className="text-xs text-gray-500 mb-3">Active filters:</p>
@@ -243,17 +237,6 @@ const Filters = ({ filters, setFilters, products }) => {
                 </button>
               </span>
             ))}
-            {filters.priceRange.max !== Infinity && (
-              <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 rounded-full text-xs text-gray-600">
-                ${filters.priceRange.min} - ${filters.priceRange.max === Infinity ? '∞' : filters.priceRange.max}
-                <button
-                  onClick={() => handlePriceChange(filters.priceRange)}
-                  className="hover:text-red-500"
-                >
-                  ×
-                </button>
-              </span>
-            )}
           </div>
         </div>
       )}
@@ -262,4 +245,3 @@ const Filters = ({ filters, setFilters, products }) => {
 };
 
 export default Filters;
-

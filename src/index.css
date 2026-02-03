@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import "tailwindcss";
 
 @layer base {
@@ -7,14 +7,14 @@
   }
 
   body {
-    color: #1a1a1a;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto', sans-serif;
+    color: #212121;
+    background-color: #f5f5f5;
   }
 
   ::selection {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: #fbc02d;
+    color: #212121;
   }
 }
 
@@ -27,5 +27,21 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+
+  .product-card {
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
 }
+
+/* Jumia-style badges */
+.bg-brand { background-color: #fbc02d; }
+.text-brand { color: #fbc02d; }
+.bg-dark-header { background-color: #212121; }
 

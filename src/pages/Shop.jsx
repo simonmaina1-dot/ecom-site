@@ -9,7 +9,6 @@ const Shop = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [viewMode, setViewMode] = useState('grid');
 
-  // Initialize filters from URL params or default values
   const [filters, setFilters] = useState({
     categories: searchParams.get('category') ? [searchParams.get('category')] : [],
     sizes: [],
@@ -17,7 +16,6 @@ const Shop = () => {
     sortBy: 'featured',
   });
 
-  // Update URL when filters change
   useEffect(() => {
     const params = new URLSearchParams();
     if (filters.categories.length > 0) {
@@ -29,28 +27,23 @@ const Shop = () => {
     setSearchParams(params);
   }, [filters, setSearchParams]);
 
-  // Filter and sort products
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
-    // Filter by category
     if (filters.categories.length > 0) {
       result = result.filter((p) => filters.categories.includes(p.category));
     }
 
-    // Filter by size
     if (filters.sizes.length > 0) {
       result = result.filter((p) =>
         p.sizes.some((s) => filters.sizes.includes(s))
       );
     }
 
-    // Filter by price
     result = result.filter(
       (p) => p.price >= filters.priceRange.min && p.price <= filters.priceRange.max
     );
 
-    // Sort
     switch (filters.sortBy) {
       case 'price-low':
         result.sort((a, b) => a.price - b.price);
@@ -78,7 +71,6 @@ const Shop = () => {
   return (
     <div className="min-h-screen bg-street-white pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold text-street-black mb-2">
@@ -90,7 +82,6 @@ const Shop = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            {/* Mobile Filter Toggle */}
             <button
               onClick={() => setIsFilterOpen(true)}
               className="lg:hidden flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
@@ -101,7 +92,6 @@ const Shop = () => {
               Filters
             </button>
 
-            {/* View Mode Toggle */}
             <div className="flex items-center bg-white border border-gray-200 rounded-xl overflow-hidden">
               <button
                 onClick={() => setViewMode('grid')}
@@ -132,14 +122,12 @@ const Shop = () => {
         </div>
 
         <div className="flex gap-8">
-          {/* Desktop Filters Sidebar */}
           <aside className="hidden lg:block w-72 flex-shrink-0">
             <div className="sticky top-24">
               <Filters filters={filters} setFilters={setFilters} products={products} />
             </div>
           </aside>
 
-          {/* Mobile Filter Overlay */}
           {isFilterOpen && (
             <div className="lg:hidden fixed inset-0 z-50">
               <div
@@ -173,7 +161,6 @@ const Shop = () => {
             </div>
           )}
 
-          {/* Product Grid */}
           <main className="flex-1">
             {resultsCount === 0 ? (
               <div className="flex flex-col items-center justify-center py-20">
@@ -221,4 +208,3 @@ const Shop = () => {
 };
 
 export default Shop;
-

@@ -6,16 +6,18 @@ import Home from './pages/Home';
 import Shop from './pages/Shop';
 import ProductDetails from './pages/ProductDetails';
 import Wishlist from './pages/Wishlist';
+import ElectronicsShop from './pages/ElectronicsShop';
 
 function App() {
   return (
     <WishlistProvider>
       <Router>
-        <div className="min-h-screen bg-street-white font-sans">
+        <div className="min-h-screen bg-white font-sans">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/shop/electronics" element={<ElectronicsShop />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/wishlist" element={<Wishlist />} />
           </Routes>
@@ -27,4 +29,3 @@ function App() {
 }
 
 export default App;
-

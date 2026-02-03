@@ -3,58 +3,46 @@ import { useState } from 'react';
 const SizeSelector = ({ sizes, selectedSize, onSizeSelect }) => {
   const [hoveredSize, setHoveredSize] = useState(null);
 
-  const sizeLabels = {
-    'XS': 'Extra Small',
-    'S': 'Small',
-    'M': 'Medium',
-    'L': 'Large',
-    'XL': 'Extra Large',
-    'XXL': 'Double XL',
-  };
+  // Storage options for electronics
+  const storageSizes = ['128GB', '256GB', '512GB', '1TB', '2TB', '4TB'];
+  const screenSizes = ['13 inch', '14 inch', '15.6 inch', '16 inch', '17 inch'];
+  const watchSizes = ['40mm', '44mm', '45mm', '49mm'];
 
-  // Group sizes logically
-  const clothingSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
-  const shoeSizes = ['7', '8', '9', '10', '11', '12'];
-  const waistSizes = ['28', '30', '32', '34', '36'];
-  const oneSize = ['One Size'];
-
-  const isClothing = sizes.some(s => clothingSizes.includes(s));
-  const isShoe = sizes.some(s => shoeSizes.includes(s));
-  const isWaist = sizes.some(s => waistSizes.includes(s));
-  const isOneSize = sizes.includes('One Size');
+  // Determine what type of size/variant this is
+  const isStorage = sizes.some(s => storageSizes.includes(s));
+  const isScreen = sizes.some(s => screenSizes.some(sc => s.includes(sc)));
+  const isWatch = sizes.some(s => watchSizes.includes(s));
 
   let displaySizes = sizes;
-  let sizeType = 'clothing';
+  let variantType = 'storage';
 
-  if (isOneSize && sizes.length === 1) {
-    displaySizes = oneSize;
-    sizeType = 'one-size';
-  } else if (isShoe && !isClothing) {
-    displaySizes = sizes.filter(s => shoeSizes.includes(s));
-    sizeType = 'shoe';
-  } else if (isWaist && !isClothing) {
-    displaySizes = sizes.filter(s => waistSizes.includes(s));
-    sizeType = 'waist';
+  if (isStorage) {
+    displaySizes = sizes.filter(s => storageSizes.includes(s));
+    variantType = 'storage';
+  } else if (isScreen) {
+    displaySizes = sizes.filter(s => screenSizes.some(sc => s.includes(sc)));
+    variantType = 'screen';
+  } else if (isWatch) {
+    displaySizes = sizes.filter(s => watchSizes.includes(s));
+    variantType = 'watch';
   } else {
-    displaySizes = sizes.filter(s => clothingSizes.includes(s));
+    displaySizes = [...new Set(sizes)];
   }
 
-  const getSizeLabel = () => {
-    if (sizeType === 'shoe') return 'US Men\'s Size';
-    if (sizeType === 'waist') return 'Waist Size (inches)';
-    return 'Standard Sizes';
+  const getVariantLabel = () => {
+    if (variantType === 'storage') return 'Select Storage Capacity';
+    if (variantType === 'screen') return 'Select Screen Size';
+    if (variantType === 'watch') return 'Select Case Size';
+    return 'Select Variant';
   };
 
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-gray-700">Select Size</span>
-        <button className="text-sm text-gray-500 hover:text-street-black transition-colors underline">
-          Size Guide
-        </button>
+        <span className="text-sm font-medium text-jumia-dark">{getVariantLabel()}</span>
       </div>
 
-      <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
+      <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
         {displaySizes.map((size) => {
           const isSelected = selectedSize === size;
           
@@ -64,17 +52,17 @@ const SizeSelector = ({ sizes, selectedSize, onSizeSelect }) => {
               onClick={() => onSizeSelect(size)}
               onMouseEnter={() => setHoveredSize(size)}
               onMouseLeave={() => setHoveredSize(null)}
-              className={`relative py-3 px-2 rounded-xl border-2 text-sm font-semibold transition-all duration-200 ${
+              className={`relative py-2.5 px-3 rounded-sm border text-sm font-medium transition-all ${
                 isSelected
-                  ? 'border-street-black bg-street-black text-white shadow-lg transform scale-105'
-                  : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50'
+                  ? 'border-jumia-orange bg-jumia-orange/5 text-jumia-orange'
+                  : 'border-jumia-border text-jumia-dark hover:border-gray-400'
               }`}
             >
               <span className="relative z-10">{size}</span>
               
               {/* Hover Effect */}
               {!isSelected && (
-                <div className={`absolute inset-0 rounded-xl bg-gray-100 transition-opacity ${
+                <div className={`absolute inset-0 bg-gray-100 transition-opacity ${
                   hoveredSize === size ? 'opacity-100' : 'opacity-0'
                 }`} />
               )}
@@ -91,16 +79,8 @@ const SizeSelector = ({ sizes, selectedSize, onSizeSelect }) => {
           );
         })}
       </div>
-
-      {/* Size Type Label */}
-      {sizeType !== 'one-size' && (
-        <p className="text-xs text-gray-500 mt-2">
-          {getSizeLabel()}
-        </p>
-      )}
     </div>
   );
 };
 
 export default SizeSelector;
-

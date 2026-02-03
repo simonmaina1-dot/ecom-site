@@ -114,7 +114,7 @@ export const products = [
       "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=600&q=80",
       "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80",
       "https://images.unsplash.com/photo-1612160609504-331bed272984?w=600&q=80",
-      "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600&q=80",
+      "https://images.unsplash.com/photo-1521369909029-2af78c332904?w=600&q=80",
       "https://images.unsplash.com/photo-1593366466122-351b1899d35e?w=600&q=80"
     ],
     description: "Classic bucket hat in premium cotton. Reversible design with embroidered logo patch.",
@@ -152,10 +152,10 @@ export const products = [
     colors: ["White", "Black", "Pink"],
     images: [
       "https://images.unsplash.com/photo-1503341455253-b2e72333dbdb?w=600&q=80",
-      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=80",
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80",
       "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80",
-      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80"
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80",
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80",
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80"
     ],
     description: "Heavyweight cotton tee with unique graphic print. Relaxed fit with dropped shoulders.",
     featured: true,
@@ -262,4 +262,3 @@ export const priceRanges = [
 ];
 
 export const allSizes = ["XS", "S", "M", "L", "XL", "XXL", "7", "8", "9", "10", "11", "12", "28", "30", "32", "34", "36", "One Size"];
-
