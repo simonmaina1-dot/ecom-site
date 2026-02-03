@@ -173,9 +173,9 @@ export const products = [
     sizes: ["S", "M", "L", "XL"],
     colors: ["Black", "Beige", "Navy"],
     images: [
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
       "https://images.unsplash.com/photo-1542272617-08f086303293?w=600&q=80",
-      "https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=600&q=80"
+      "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=600&q=80",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80"
     ],
     description: "Lightweight puffer vest for versatile layering. Water-resistant finish with zip-up closure.",
     featured: false,
