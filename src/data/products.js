@@ -13,7 +13,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80",
       "https://images.unsplash.com/photo-1620799140408-ed5341cd2431?w=600&q=80",
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80"
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
+      "https://images.unsplash.com/photo-1509023464722-18d996327cae?w=600&q=80"
     ],
     description: "Premium oversized hoodie with bold graphic print. Made from 100% cotton fleece with a relaxed fit for that streetwear aesthetic.",
     featured: true,
@@ -31,6 +32,7 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1551488852-080184d044d4?w=600&q=80",
       "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&q=80",
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"
     ],
     description: "Lightweight tech jacket with water-resistant coating. Features multiple pockets and a sleek, modern silhouette perfect for urban exploration.",
@@ -49,7 +51,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1552346154-21d32cc405f5?w=600&q=80",
       "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80",
-      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80"
+      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80",
+      "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600&q=80"
     ],
     description: "Classic high-top sneakers with retro-inspired design. Premium leather construction with cushioned sole for all-day comfort.",
     featured: true,
@@ -67,7 +70,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
       "https://images.unsplash.com/photo-1503341455253-b2e72333dbdb?w=600&q=80",
-      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80"
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80"
     ],
     description: "Boxy fit cotton t-shirt with reinforced collar. The perfect basics piece for layering or wearing solo.",
     featured: false,
@@ -85,7 +89,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80",
       "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80",
-      "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80"
+      "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80",
+      "https://images.unsplash.com/photo-1555340108-491b6c932f59?w=600&q=80"
     ],
     description: "Utility cargo pants with multiple pockets. Relaxed fit with adjustable ankle straps for versatile styling.",
     featured: false,
@@ -103,7 +108,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=600&q=80",
       "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80",
-      "https://images.unsplash.com/photo-1612160609504-331bed272984?w=600&q=80"
+      "https://images.unsplash.com/photo-1612160609504-331bed272984?w=600&q=80",
+      "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=600&q=80"
     ],
     description: "Classic bucket hat in premium cotton. Reversible design with embroidered logo patch.",
     featured: false,
@@ -121,7 +127,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
       "https://images.unsplash.com/photo-1591561954557-26941169b49e?w=600&q=80",
-      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80"
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80",
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&q=80"
     ],
     description: "Compact crossbody bag with adjustable strap. Features waterproof material and multiple compartments.",
     featured: false,
@@ -139,7 +146,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1503341455253-b2e72333dbdb?w=600&q=80",
       "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=80",
-      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80"
+      "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80"
     ],
     description: "Heavyweight cotton tee with unique graphic print. Relaxed fit with dropped shoulders.",
     featured: true,
@@ -157,7 +165,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&q=80",
       "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&q=80",
-      "https://images.unsplash.com/photo-1491553895911-0055uj6b352?w=600&q=80"
+      "https://images.unsplash.com/photo-1491553895911-0055uj6b352?w=600&q=80",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80"
     ],
     description: "Chunky sole sneakers with retro 90s vibe. Premium materials with maximum comfort technology.",
     featured: true,
@@ -175,7 +184,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1542272617-08f086303293?w=600&q=80",
       "https://images.unsplash.com/photo-1516762689617-e1cffcef479d?w=600&q=80",
-      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80"
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&q=80",
+      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&q=80"
     ],
     description: "Lightweight puffer vest for versatile layering. Water-resistant finish with zip-up closure.",
     featured: false,
@@ -193,7 +203,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=600&q=80",
       "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80"
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80",
+      "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80"
     ],
     description: "Relaxed wide-leg sweatpants in premium French terry. Elastic waistband with drawstring closure.",
     featured: false,
@@ -211,7 +222,8 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1627123424574-181ce5171c98?w=600&q=80",
       "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80",
-      "https://images.unsplash.com/photo-1512412046876-f386342eddb3?w=600&q=80"
+      "https://images.unsplash.com/photo-1512412046876-f386342eddb3?w=600&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80"
     ],
     description: "Heavy-duty tactical belt with metal buckle. Webbed nylon strap with quick-release mechanism.",
     featured: false,
