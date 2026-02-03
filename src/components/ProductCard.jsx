@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
   const { isInWishlist, toggleWishlist } = useWishlist();
   const [isHovered, setIsHovered] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
-  const [imageError, setImageError] = useState(false);
+  const [imageErrors, setImageErrors] = useState({});
   const isWishlisted = isInWishlist(product.id);
 
   const handleWishlistClick = (e) => {
@@ -22,9 +22,25 @@ const ProductCard = ({ product }) => {
     return price.toLocaleString('en-KE', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
   };
 
-  const handleImageError = useCallback(() => {
-    setImageError(true);
+  const handleImageError = useCallback((index) => {
+    setImageErrors((prev) => ({ ...prev, [index]: true }));
   }, []);
+
+  // Get current image with fallback
+  const getCurrentImage = (index) => {
+    if (imageErrors[index]) {
+      return FALLBACK_IMAGE;
+    }
+    return product.images[index] || FALLBACK_IMAGE;
+  };
+
+  // Reset to first image when error occurs on current
+  const handleCurrentImageError = useCallback(() => {
+    handleImageError(currentImage);
+    // Auto-switch to next available image
+    const nextIndex = (currentImage + 1) % product.images.length;
+    setCurrentImage(nextIndex);
+  }, [currentImage, handleImageError, product.images.length]);
 
   return (
     <div
@@ -36,13 +52,14 @@ const ProductCard = ({ product }) => {
       <Link to={`/product/${product.id}`} className="block relative aspect-[3/4] overflow-hidden bg-gray-100">
         {/* Main Image */}
         <img
-          src={imageError ? FALLBACK_IMAGE : product.images[currentImage]}
+          src={getCurrentImage(currentImage)}
           alt={`${product.name} - Image ${currentImage + 1}`}
           className={`w-full h-full object-cover transition-transform duration-700 ease-out ${
             isHovered ? 'scale-110' : 'scale-100'
           }`}
-          onError={handleImageError}
-          loading="lazy"
+          onError={handleCurrentImageError}
+          loading="eager"
+          key={`${product.id}-${currentImage}`}
         />
 
         {/* Hover Overlay */}

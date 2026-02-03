@@ -11,16 +11,32 @@ const ImageGallery = ({ images, productName }) => {
     setImageErrors((prev) => ({ ...prev, [index]: true }));
   }, []);
 
+  // Get image with fallback
+  const getImage = (index) => {
+    if (imageErrors[index]) {
+      return FALLBACK_IMAGE;
+    }
+    return images[index] || FALLBACK_IMAGE;
+  };
+
+  // Handle error and auto-switch to next image
+  const handleCurrentImageError = useCallback(() => {
+    handleImageError(selectedIndex);
+    const nextIndex = (selectedIndex + 1) % images.length;
+    setSelectedIndex(nextIndex);
+  }, [selectedIndex, handleImageError, images.length]);
+
   return (
     <div className="flex flex-col gap-4">
       {/* Main Image */}
       <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-100">
         <img
-          src={imageErrors[selectedIndex] ? FALLBACK_IMAGE : images[selectedIndex]}
+          src={getImage(selectedIndex)}
           alt={`${productName} - Image ${selectedIndex + 1}`}
           className="w-full h-full object-cover transition-opacity duration-300"
-          onError={() => handleImageError(selectedIndex)}
-          loading="lazy"
+          onError={handleCurrentImageError}
+          loading="eager"
+          key={`${productName}-${selectedIndex}`}
         />
         
         {/* Navigation Arrows */}
