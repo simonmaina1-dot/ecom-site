@@ -1,4 +1,4 @@
-  // Mock product data with Unsplash API images
+// Mock product data with Unsplash API images
 // Streetwear aesthetic: hoodies, tees, sneakers, jackets, accessories
 
 export const products = [
@@ -13,7 +13,7 @@ export const products = [
     images: [
       "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80",
       "https://images.unsplash.com/photo-1620799140408-ed5341cd2431?w=600&q=80",
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80"
     ],
     description: "Premium oversized hoodie with bold graphic print. Made from 100% cotton fleece with a relaxed fit for that streetwear aesthetic.",
     featured: true,
@@ -29,9 +29,9 @@ export const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     colors: ["Black", "Navy", "Olive"],
     images: [
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
+      "https://images.unsplash.com/photo-1551488852-080184d044d4?w=600&q=80",
       "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&q=80",
-      "https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=600&q=80"
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80"
     ],
     description: "Lightweight tech jacket with water-resistant coating. Features multiple pockets and a sleek, modern silhouette perfect for urban exploration.",
     featured: true,
@@ -66,8 +66,8 @@ export const products = [
     colors: ["White", "Black", "Gray", "Navy"],
     images: [
       "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80",
-      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=600&q=80",
-      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80"
+      "https://images.unsplash.com/photo-1503341455253-b2e72333dbdb?w=600&q=80",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80"
     ],
     description: "Boxy fit cotton t-shirt with reinforced collar. The perfect basics piece for layering or wearing solo.",
     featured: false,
@@ -84,8 +84,8 @@ export const products = [
     colors: ["Black", "Olive", "Khaki"],
     images: [
       "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80",
-      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80",
-      "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=600&q=80"
+      "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80",
+      "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=600&q=80"
     ],
     description: "Utility cargo pants with multiple pockets. Relaxed fit with adjustable ankle straps for versatile styling.",
     featured: false,
@@ -138,7 +138,7 @@ export const products = [
     colors: ["White", "Black", "Pink"],
     images: [
       "https://images.unsplash.com/photo-1503341455253-b2e72333dbdb?w=600&q=80",
-      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80",
+      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&q=80",
       "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80"
     ],
     description: "Heavyweight cotton tee with unique graphic print. Relaxed fit with dropped shoulders.",
@@ -174,7 +174,7 @@ export const products = [
     colors: ["Black", "Beige", "Navy"],
     images: [
       "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=600&q=80",
-      "https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=600&q=80",
+      "https://images.unsplash.com/photo-1542272617-08f086303293?w=600&q=80",
       "https://images.unsplash.com/photo-1520975661595-6453be3f7070?w=600&q=80"
     ],
     description: "Lightweight puffer vest for versatile layering. Water-resistant finish with zip-up closure.",
@@ -191,9 +191,9 @@ export const products = [
     sizes: ["S", "M", "L", "XL"],
     colors: ["Black", "Gray", "Beige"],
     images: [
-      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80",
       "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=600&q=80",
-      "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80"
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600&q=80"
     ],
     description: "Relaxed wide-leg sweatpants in premium French terry. Elastic waistband with drawstring closure.",
     featured: false,
@@ -224,7 +224,7 @@ export const categories = [
   { id: 1, name: "Hoodies", image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80", count: 2 },
   { id: 2, name: "Tees", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80", count: 3 },
   { id: 3, name: "Sneakers", image: "https://images.unsplash.com/photo-1552346154-21d32cc405f5?w=400&q=80", count: 2 },
-  { id: 4, name: "Jackets", image: "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&q=80", count: 2 },
+  { id: 4, name: "Jackets", image: "https://images.unsplash.com/photo-1551488852-080184d044d4?w=400&q=80", count: 2 },
   { id: 5, name: "Pants", image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&q=80", count: 2 },
   { id: 6, name: "Accessories", image: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=400&q=80", count: 3 }
 ];
