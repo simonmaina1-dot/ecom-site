@@ -78,7 +78,7 @@ export const products = [
       "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80"
     ],
     description: "Boxy fit cotton t-shirt with reinforced collar. The perfect basics piece for layering or wearing solo.",
-    featured: false,
+    featured: true,
     rating: 4.5,
     reviews: 312
   },
@@ -98,7 +98,7 @@ export const products = [
       "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=600&q=80"
     ],
     description: "Utility cargo pants with multiple pockets. Relaxed fit with adjustable ankle straps for versatile styling.",
-    featured: false,
+    featured: true,
     rating: 4.6,
     reviews: 156
   },
@@ -118,7 +118,7 @@ export const products = [
       "https://images.unsplash.com/photo-1593366466122-351b1899d35e?w=600&q=80"
     ],
     description: "Classic bucket hat in premium cotton. Reversible design with embroidered logo patch.",
-    featured: false,
+    featured: true,
     rating: 4.4,
     reviews: 78
   },
@@ -138,7 +138,7 @@ export const products = [
       "https://images.unsplash.com/photo-1598346762291-ee5c5574dbdf?w=600&q=80"
     ],
     description: "Compact crossbody bag with adjustable strap. Features waterproof material and multiple compartments.",
-    featured: false,
+    featured: true,
     rating: 4.7,
     reviews: 92
   },
@@ -198,7 +198,7 @@ export const products = [
       "https://images.unsplash.com/photo-1551488852-080184d044d4?w=600&q=80"
     ],
     description: "Lightweight puffer vest for versatile layering. Water-resistant finish with zip-up closure.",
-    featured: false,
+    featured: true,
     rating: 4.6,
     reviews: 98
   },
@@ -218,7 +218,7 @@ export const products = [
       "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80"
     ],
     description: "Relaxed wide-leg sweatpants in premium French terry. Elastic waistband with drawstring closure.",
-    featured: false,
+    featured: true,
     rating: 4.7,
     reviews: 145
   },
@@ -238,7 +238,7 @@ export const products = [
       "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80"
     ],
     description: "Heavy-duty tactical belt with metal buckle. Webbed nylon strap with quick-release mechanism.",
-    featured: false,
+    featured: true,
     rating: 4.5,
     reviews: 67
   }
