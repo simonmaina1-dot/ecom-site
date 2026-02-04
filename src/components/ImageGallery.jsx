@@ -29,7 +29,7 @@ const ImageGallery = ({ images, productName }) => {
   return (
     <div className="flex flex-col gap-3">
       {/* Main Image */}
-      <div className="relative aspect-square bg-white rounded-sm border border-jumia-border overflow-hidden">
+      <div className="relative aspect-square bg-white rounded-sm border border-gray-200 overflow-hidden">
         <img
           src={getImage(selectedIndex)}
           alt={`${productName} - Image ${selectedIndex + 1}`}
@@ -44,7 +44,7 @@ const ImageGallery = ({ images, productName }) => {
           <>
             <button
               onClick={() => setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white border border-jumia-border rounded-full flex items-center justify-center text-gray-600 hover:bg-jumia-gray hover:border-jumia-orange transition-all shadow-sm"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 hover:border-brand transition-all shadow-sm"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -52,7 +52,7 @@ const ImageGallery = ({ images, productName }) => {
             </button>
             <button
               onClick={() => setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white border border-jumia-border rounded-full flex items-center justify-center text-gray-600 hover:bg-jumia-gray hover:border-jumia-orange transition-all shadow-sm"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-100 hover:border-brand transition-all shadow-sm"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -67,7 +67,7 @@ const ImageGallery = ({ images, productName }) => {
         </div>
 
         {/* Wishlist Button */}
-        <button className="absolute top-2 right-2 w-8 h-8 bg-white border border-jumia-border rounded-full flex items-center justify-center text-gray-400 hover:text-jumia-red hover:border-jumia-red transition-all shadow-sm">
+        <button className="absolute top-2 right-2 w-8 h-8 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-400 hover:text-red-500 hover:border-red-500 transition-all shadow-sm">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
           </svg>
@@ -88,7 +88,7 @@ const ImageGallery = ({ images, productName }) => {
               onClick={() => setSelectedIndex(index)}
               className={`relative flex-shrink-0 w-16 h-16 rounded-sm overflow-hidden border-2 transition-all ${
                 selectedIndex === index
-                  ? 'border-jumia-orange'
+                  ? 'border-brand'
                   : 'border-transparent hover:border-gray-300'
               }`}
             >

@@ -12,12 +12,12 @@ export const useWishlist = () => {
 
 export const WishlistProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState(() => {
-    const savedWishlist = localStorage.getItem('streetwear-wishlist');
+    const savedWishlist = localStorage.getItem('streetfair-wishlist');
     return savedWishlist ? JSON.parse(savedWishlist) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem('streetwear-wishlist', JSON.stringify(wishlist));
+    localStorage.setItem('streetfair-wishlist', JSON.stringify(wishlist));
   }, [wishlist]);
 
   const addToWishlist = (product) => {

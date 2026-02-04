@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { priceRanges, allSizes, categories } from '../data/products';
 
-const Filters = ({ filters, setFilters, products }) => {
+const Filters = ({ filters, setFilters }) => {
   const [isExpanded, setIsExpanded] = useState({
     category: true,
     price: true,

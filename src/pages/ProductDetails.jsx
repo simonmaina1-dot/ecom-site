@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { products } from '../data/products';
 import { useWishlist } from '../context/WishlistContext';
 import ImageGallery from '../components/ImageGallery';
@@ -7,7 +7,6 @@ import SizeSelector from '../components/SizeSelector';
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const { isInWishlist, toggleWishlist } = useWishlist();
   const [product, setProduct] = useState(null);
   const [selectedColor, setSelectedColor] = useState('');
@@ -21,14 +20,18 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    setIsLoading(true);
-    const foundProduct = products.find((p) => p.id === parseInt(id));
-    setProduct(foundProduct);
-    if (foundProduct) {
-      setSelectedColor(foundProduct.colors[0]);
-      setSelectedSize(foundProduct.sizes[0] || '');
-    }
-    setIsLoading(false);
+    // Simulate loading for smooth transition
+    const timer = setTimeout(() => {
+      const foundProduct = products.find((p) => p.id === parseInt(id));
+      setProduct(foundProduct);
+      if (foundProduct) {
+        setSelectedColor(foundProduct.colors[0]);
+        setSelectedSize(foundProduct.sizes[0] || '');
+      }
+      setIsLoading(false);
+    }, 300);
+    
+    return () => clearTimeout(timer);
   }, [id]);
 
   const isWishlisted = product ? isInWishlist(product.id) : false;

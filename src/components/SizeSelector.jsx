@@ -39,7 +39,7 @@ const SizeSelector = ({ sizes, selectedSize, onSizeSelect }) => {
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
-        <span className="text-sm font-medium text-jumia-dark">{getVariantLabel()}</span>
+        <span className="text-sm font-medium text-gray-800">{getVariantLabel()}</span>
       </div>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
@@ -54,8 +54,8 @@ const SizeSelector = ({ sizes, selectedSize, onSizeSelect }) => {
               onMouseLeave={() => setHoveredSize(null)}
               className={`relative py-2.5 px-3 rounded-sm border text-sm font-medium transition-all ${
                 isSelected
-                  ? 'border-jumia-orange bg-jumia-orange/5 text-jumia-orange'
-                  : 'border-jumia-border text-jumia-dark hover:border-gray-400'
+                  ? 'border-brand bg-brand/5 text-brand'
+                  : 'border-gray-300 text-gray-700 hover:border-gray-400'
               }`}
             >
               <span className="relative z-10">{size}</span>

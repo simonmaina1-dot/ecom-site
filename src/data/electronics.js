@@ -1,5 +1,5 @@
 // Electronics and IT Products Data
-// Jumia-style e-commerce with laptops, smartphones, accessories, audio, gaming, TVs
+// Street-Fair Global e-commerce with laptops, smartphones, accessories, audio, gaming, TVs
 
 export const products = [
   // Smartphones

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { products, categories } from '../data/electronics';
 import ProductCard from '../components/ProductCard';
+import Footer from '../components/Footer';
 
 const ElectronicsShop = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,7 +18,7 @@ const ElectronicsShop = () => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [heroSlides.length]);
 
   const flashSaleProducts = products.filter((p) => p.flashSale).slice(0, 6);
   const featuredProducts = products.filter((p) => p.featured).slice(0, 8);
@@ -176,12 +177,8 @@ const ElectronicsShop = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm">© 2026 TechZone Electronics. All rights reserved.</p>
-        </div>
-      </footer>
+{/* Footer */}
+      <Footer />
     </div>
   );
 };
